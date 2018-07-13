@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">桂电课表</string>
+    <string name="url_login">http://xk.cacacai.cn:8080/student/public/login.asp</string>
+    <string name="url_course">http://xk.cacacai.cn:8080/student/coursetable.asp</string>
+    <string name="url_exam">http://xk.cacacai.cn:8080/student/testquery.asp</string>
+    <string name="url_xuefenji">http://xk.cacacai.cn:8080/student/xuefenji.asp</string>
+    <string name="url_score">http://xk.cacacai.cn:8080/student/score.asp</string>
+    <string name="url_info">http://xk.cacacai.cn:8080/student/info.asp</string>
+    <string name="url_select">http://xk.cacacai.cn:8080/student/select.asp</string>
+    <string name="xuefenji">http://172.16.64.8/arrange/stxuefenji.asp</string>
+</resources>

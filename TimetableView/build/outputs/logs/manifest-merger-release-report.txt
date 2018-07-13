@@ -1,0 +1,29 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:2:1-10:12
+INJECTED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:2:1-10:12
+INJECTED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:2:1-10:12
+INJECTED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:2:1-10:12
+INJECTED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:2:1-10:12
+INJECTED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:2:1-10:12
+INJECTED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:2:1-10:12
+	package
+		ADDED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:3:5-57
+		INJECTED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml
+		INJECTED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml
+	android:versionName
+		ADDED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:5:5-30
+		INJECTED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml
+		INJECTED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml
+	xmlns:android
+		ADDED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:4:5-28
+		INJECTED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml
+		INJECTED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml
+uses-sdk
+ADDED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		ADDED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:9:9-38
+	android:minSdkVersion
+		ADDED from F:\AndroidProject\SubjectTimetable\TimetableView\AndroidManifest.xml:8:9-35

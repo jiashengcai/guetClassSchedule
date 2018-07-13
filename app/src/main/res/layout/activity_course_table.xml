@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shq.subjecttimetable.activities.CourseTableActivity">
+
+    <include layout="@layout/course_table_header"/>
+    <com.zhuangfei.timetable.core.TimetableView
+        android:id="@+id/id_timetableView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+    </com.zhuangfei.timetable.core.TimetableView>
+</android.support.constraint.ConstraintLayout>

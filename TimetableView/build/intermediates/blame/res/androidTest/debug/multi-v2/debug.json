@@ -1,0 +1,130 @@
+{
+    "logs": [
+        {
+            "outputFile": "F:\\AndroidProject\\SubjectTimetable\\TimetableView\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v14_values-v14.arsc.flat",
+            "map": [
+                {
+                    "source": "F:\\AndroidProject\\SubjectTimetable\\TimetableView\\build\\intermediates\\bundles\\debug\\res\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "201"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "F:\\AndroidProject\\AndroidTimetableView\\TimetableView\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-w820dp-v13_values-w820dp-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "F:\\AndroidProject\\AndroidTimetableView\\TimetableView\\build\\intermediates\\bundles\\debug\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "F:\\AndroidProject\\AndroidTimetableView\\TimetableView\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v14_values-v14.arsc.flat",
+            "map": [
+                {
+                    "source": "F:\\AndroidProject\\AndroidTimetableView\\TimetableView\\build\\intermediates\\bundles\\debug\\res\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "201"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "F:\\AndroidProject\\SubjectTimetable\\TimetableView\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v11_values-v11.arsc.flat",
+            "map": [
+                {
+                    "source": "F:\\AndroidProject\\SubjectTimetable\\TimetableView\\build\\intermediates\\bundles\\debug\\res\\values-v11\\values-v11.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "187"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "F:\\AndroidProject\\SubjectTimetable\\TimetableView\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-w820dp-v13_values-w820dp-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "F:\\AndroidProject\\SubjectTimetable\\TimetableView\\build\\intermediates\\bundles\\debug\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "F:\\AndroidProject\\AndroidTimetableView\\TimetableView\\build\\intermediates\\res\\merged\\androidTest\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "F:\\AndroidProject\\AndroidTimetableView\\TimetableView\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,110",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,96,140,185,229,273,319,372,431,481,541,587,631,675,718,762,806,850,894,938,984,1028,1074,1123,1171,1224,1267,1311,1359,1404,1451,1494,1537,1581,1623,1666,1715,1767,1822,1877,1932,1976,2021,2058,2095,2137,2180,2223,2265,2307,2350,2393,2436,2479,2522,2565,2607,2649,2691,2733,2775,2817,2863,2909,2955,2994,3034,3074,3114,3159,3204,3250,3293,3343,3390,3446,3498,3542,3588,3634,3682,3732,3778,3823,3872,3924,3973,4020,4062,4120,4176,4218,4262,4306,4349,4399,4445,4491,4536,4589,4644,4697,4988",
+                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,109,113",
+                        "endColumns": "40,43,44,43,43,45,52,58,49,59,45,43,43,42,43,43,43,43,43,45,43,45,48,47,52,42,43,47,44,46,42,42,43,41,42,48,51,54,54,54,43,44,36,36,41,42,42,41,41,42,42,42,42,42,42,41,41,41,41,41,41,45,45,45,38,39,39,39,44,44,45,42,49,46,55,51,43,45,45,47,49,45,44,48,51,48,46,41,57,55,41,43,43,42,49,45,45,44,52,54,52,12,12",
+                        "endOffsets": "91,135,180,224,268,314,367,426,476,536,582,626,670,713,757,801,845,889,933,979,1023,1069,1118,1166,1219,1262,1306,1354,1399,1446,1489,1532,1576,1618,1661,1710,1762,1817,1872,1927,1971,2016,2053,2090,2132,2175,2218,2260,2302,2345,2388,2431,2474,2517,2560,2602,2644,2686,2728,2770,2812,2858,2904,2950,2989,3029,3069,3109,3154,3199,3245,3288,3338,3385,3441,3493,3537,3583,3629,3677,3727,3773,3818,3867,3919,3968,4015,4057,4115,4171,4213,4257,4301,4344,4394,4440,4486,4531,4584,4639,4692,4983,5194"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "F:\\AndroidProject\\AndroidTimetableView\\TimetableView\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v11_values-v11.arsc.flat",
+            "map": [
+                {
+                    "source": "F:\\AndroidProject\\AndroidTimetableView\\TimetableView\\build\\intermediates\\bundles\\debug\\res\\values-v11\\values-v11.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "187"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "F:\\AndroidProject\\SubjectTimetable\\TimetableView\\build\\intermediates\\res\\merged\\androidTest\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "F:\\AndroidProject\\SubjectTimetable\\TimetableView\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,110",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,96,140,185,229,273,319,372,431,481,541,587,631,675,718,762,806,850,894,938,984,1028,1074,1123,1171,1224,1267,1311,1359,1404,1451,1494,1537,1581,1623,1666,1715,1767,1822,1877,1932,1976,2021,2058,2095,2137,2180,2223,2265,2307,2350,2393,2436,2479,2522,2565,2607,2649,2691,2733,2775,2817,2863,2909,2955,2994,3034,3074,3114,3159,3204,3250,3293,3343,3390,3446,3498,3542,3588,3634,3682,3732,3778,3823,3872,3924,3973,4020,4062,4120,4176,4218,4262,4306,4349,4399,4445,4491,4536,4589,4644,4697,4988",
+                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,109,113",
+                        "endColumns": "40,43,44,43,43,45,52,58,49,59,45,43,43,42,43,43,43,43,43,45,43,45,48,47,52,42,43,47,44,46,42,42,43,41,42,48,51,54,54,54,43,44,36,36,41,42,42,41,41,42,42,42,42,42,42,41,41,41,41,41,41,45,45,45,38,39,39,39,44,44,45,42,49,46,55,51,43,45,45,47,49,45,44,48,51,48,46,41,57,55,41,43,43,42,49,45,45,44,52,54,52,12,12",
+                        "endOffsets": "91,135,180,224,268,314,367,426,476,536,582,626,670,713,757,801,845,889,933,979,1023,1069,1118,1166,1219,1262,1306,1354,1399,1446,1489,1532,1576,1618,1661,1710,1762,1817,1872,1927,1971,2016,2053,2090,2132,2175,2218,2260,2302,2345,2388,2431,2474,2517,2560,2602,2644,2686,2728,2770,2812,2858,2904,2950,2989,3029,3069,3109,3154,3199,3245,3288,3338,3385,3441,3493,3537,3583,3629,3677,3727,3773,3818,3867,3919,3968,4015,4057,4115,4171,4213,4257,4301,4344,4394,4440,4486,4531,4584,4639,4692,4983,5194"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".showScore">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="学分绩查询"
+            android:textSize="28dp"
+            android:gravity="center"
+            android:textColor="@color/app_blue2"/>
+
+        <Button
+            android:id="@+id/xuefenji1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="2015-2016学年"
+            android:textSize="20dp"
+            android:background="@color/app_white2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:text="" />
+
+        <Button
+            android:id="@+id/xuefenji2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="2016-2017学年"
+            android:textSize="20dp"
+            android:background="@color/app_white2"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:text="" />
+        <Button
+            android:id="@+id/xuefenji3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="2017-2018学年"
+            android:textSize="20dp"
+            android:background="@color/app_white2" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:text="" />
+        <Button
+            android:id="@+id/xuefenji0"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="入学至今"
+            android:textSize="20dp"
+            android:background="@color/app_white2"/>
+
+        <TextView
+            android:id="@+id/ffscore"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:text="100"
+            android:gravity="center"
+            android:textSize="50dp"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

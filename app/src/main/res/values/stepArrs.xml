@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="stepArrs">
+        <item>第1节</item>
+        <item>第2节</item>
+        <item>第3节</item>
+        <item>第4节</item>
+        <item>第5节</item>
+        <item>第6节</item>
+        <item>第7节</item>
+        <item>第8节</item>
+        <item>第9节</item>
+        <item>第10节</item>
+        <item>第11节</item>
+        <item>第12节</item>
+    </string-array>
+</resources>
