@@ -15,7 +15,7 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:text="学分绩查询"
             android:textSize="28dp"
             android:gravity="center"

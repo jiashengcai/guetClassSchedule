@@ -19,25 +19,24 @@
             android:src="@drawable/guet" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="桂林电子科技大学"
             android:background="@color/white"/>
 
         <TextView
-            android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="10dp"
             android:text="" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="45dp"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -45,7 +44,7 @@
                 android:text="教务系统" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -53,25 +52,54 @@
                 android:text="学分制教务系统" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/button4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:text="学费查询" />
+
         </LinearLayout>
 
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:text="" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/button7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:text="四六级成绩查询" />
+            android:text="教务系统（外网）" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="CET"
+            android:textSize="36dp"
+            android:gravity="center"
+            android:textColor="@color/app_blue2"/>
 
         <Button
-            android:id="@+id/buttont"
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="四六级报名" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:text="" />
+
+        <Button
+            android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"

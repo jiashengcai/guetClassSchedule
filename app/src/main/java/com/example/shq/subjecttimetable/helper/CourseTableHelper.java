@@ -1,10 +1,8 @@
 package com.example.shq.subjecttimetable.helper;
 
-import android.widget.ListView;
-
 import com.example.shq.subjecttimetable.other.Exam;
+import com.example.shq.subjecttimetable.other.Grade;
 import com.example.shq.subjecttimetable.other.MySubjectBean;
-import com.example.shq.subjecttimetable.other.Score;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -362,40 +360,40 @@ public class CourseTableHelper {
         return examList;
     }
 
-    public static List<Score> htmlToScoreList(String htmlStr){
-        List<Score> scoreList=new ArrayList<>();
-        ArrayList<String> listScoreStr= getAllSatisfyStr(htmlStr,
-                "<tr><td align=\"center\">(.*?)</td><td align=\"center\">(.*?)</td><td align=\"center\">(.*?)</td><td align=\"center\">(.*?)</td><td align=\"center\">(.*?)</td><td align=\"center\">(.*?)</td></tr>");
-//<tr><td align=center>(.*?)</td><td align=center>(.*?)</td><td align=center>(.*?)</td><td align=center>(.*?)</td><td align=center>(.*?)</td><td align=center>(.*?)</td></tr>
-        for(int i=0;i<listScoreStr.size();i++){
-            ArrayList<String> temp=getAllSatisfyStr(listScoreStr.get(i),
+    public static List<Grade> htmlToGradeList(String htmlStr) {
+        List<Grade> gradeList = new ArrayList<>();
+        ArrayList<String> listExamStr = getAllSatisfyStr(htmlStr,
+                "<tr><td align=center>(.*?)</td><td align=center>(.*?)</td><td align=center>(.*?)</td><td align=center>(.*?)</td><td align=center>(.*?)</td><td align=center>(.*?)</td></tr>");
+
+        for (int i = 0; i < listExamStr.size(); i++) {
+            ArrayList<String> temp = getAllSatisfyStr(listExamStr.get(i),
                     "<td align=center>(.*?)</td>");
-            Score score=new Score();
-            for (int j=0;j<temp.size();j++){
-                String strTemp=subString(temp.get(j),">","</");
-                switch (j)
-                {
+            Grade grade = new Grade();
+            for (int j = 0; j < temp.size(); j++) {
+                String strTemp = subString(temp.get(j), ">", "</");
+                switch (j) {
                     case 0:
+                        grade.setXueqi(strTemp);
                         break;
                     case 1:
-                        score.setcName(strTemp);
-                        break;
-                    case 2:
+                        grade.setName(strTemp);
                         break;
                     case 3:
-                        score.setScore(strTemp);
+                        grade.setChengji(strTemp);
                         break;
                     case 4:
-                        score.setCredit(strTemp);
+                        grade.setXuefen(strTemp);
                         break;
                     case 5:
+                        grade.setKechengxingzhi(strTemp);
+                        break;
+                    default:
                         break;
                 }
             }
-            scoreList.add(score);
-
+            gradeList.add(grade);
         }
-        return scoreList;
+        return gradeList;
     }
 
     public static void sort(List<Integer> list) {

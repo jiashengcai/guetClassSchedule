@@ -22,52 +22,57 @@ import java.util.List;
 
 import razerdp.basepopup.BasePopupWindow;
 
-public class ListScorePopup extends BasePopupWindow {
-    private ListView mListView;
-    private ListScorePopup.OnListPopupItemClickListener mOnListPopupItemClickListener;
+/**
+ * Created by shq on 2018/7/9.
+ */
 
-    private ListScorePopup(Activity context) {
+public class ListGradePopup extends BasePopupWindow {
+    private ListView mListView;
+    private OnListPopupItemClickListener mOnListPopupItemClickListener;
+
+    private ListGradePopup(Activity context) {
         super(context);
     }
 
-    public ListScorePopup(Activity context, ListScorePopup.Builder builder) {
+    public ListGradePopup(Activity context, Builder builder) {
         this(context);
         mListView = (ListView) findViewById(R.id.popup_list);
         setAdapter(context, builder);
     }
+
     public static class Builder {
-        private List<Score> mItemEventList = new ArrayList<>();
+        private List<Grade> mItemEventList = new ArrayList<>();
         private Activity mContext;
 
         public Builder(Activity context) {
             mContext = context;
         }
 
-        public ListScorePopup.Builder addItem(Score itemTx) {
+        public Builder addItem(Grade itemTx) {
             mItemEventList.add(itemTx);
             return this;
         }
 
-/*        public Builder addItem(int clickTag, Exam itemTx) {
+/*        public Builder addItem(int clickTag, Grade itemTx) {
             mItemEventList.add(new clickItemEvent(clickTag, itemTx));
             return this;
         }*/
 
-        public List<Score> getItemEventList() {
+        public List<Grade> getItemEventList() {
             return mItemEventList;
         }
 
-        public ListScorePopup build() {
-            return new ListScorePopup(mContext, this);
+        public ListGradePopup build() {
+            return new ListGradePopup(mContext, this);
         }
 
     }
 
     public static class clickItemEvent {
         private int clickTag;
-        private Score itemTx;
+        private Grade itemTx;
 
-        public clickItemEvent(int clickTag, Score itemTx) {
+        public clickItemEvent(int clickTag, Grade itemTx) {
             this.clickTag = clickTag;
             this.itemTx = itemTx;
         }
@@ -80,11 +85,11 @@ public class ListScorePopup extends BasePopupWindow {
             this.clickTag = clickTag;
         }
 
-        public Score getItemTx() {
+        public Grade getItemTx() {
             return itemTx;
         }
 
-        public void setItemTx(Score itemTx) {
+        public void setItemTx(Grade itemTx) {
             this.itemTx = itemTx;
         }
     }
@@ -93,9 +98,9 @@ public class ListScorePopup extends BasePopupWindow {
     class ListPopupAdapter extends BaseAdapter {
         private LayoutInflater mInflater;
         private Context mContext;
-        private List<Score> mItemList;
+        private List<Grade> mItemList;
 
-        public ListPopupAdapter(Context context, @NonNull List<Score> itemList) {
+        public ListPopupAdapter(Context context, @NonNull List<Grade> itemList) {
             mContext = context;
             mItemList = itemList;
             mInflater = LayoutInflater.from(context);
@@ -107,8 +112,8 @@ public class ListScorePopup extends BasePopupWindow {
         }
 
         @Override
-        public Score getItem(int position) {
-            if (mItemList.get(position) instanceof Score) {
+        public Grade getItem(int position) {
+            if (mItemList.get(position) instanceof Grade) {
                 return mItemList.get(position);
             }
             /*if (mItemList.get(position) instanceof clickItemEvent) {
@@ -124,39 +129,40 @@ public class ListScorePopup extends BasePopupWindow {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            ListScorePopup.ListPopupAdapter.ViewHolder vh = null;
+            ViewHolder vh = null;
             if (convertView == null) {
-                vh = new ListScorePopup.ListPopupAdapter.ViewHolder();
-                convertView = mInflater.inflate(R.layout.item_score, parent, false);
-                vh.tv_cname = (TextView) convertView.findViewById(R.id.textView7);
-                vh.tv_cscore = (TextView) convertView.findViewById(R.id.textView8);
-                vh.tv_cre = (TextView) convertView.findViewById(R.id.textView9);
+                vh = new ViewHolder();
+                convertView = mInflater.inflate(R.layout.item_grade, parent, false);
+                vh.tv_xuefen = (TextView) convertView.findViewById(R.id.tv_xuefen);
+                vh.tv_grade = (TextView) convertView.findViewById(R.id.tv_grade);
+                vh.tv_name=(TextView)convertView.findViewById(R.id.tv_name);
                 convertView.setTag(vh);
             } else {
-                vh = (ListScorePopup.ListPopupAdapter.ViewHolder) convertView.getTag();
+                vh = (ViewHolder) convertView.getTag();
             }
-            vh.tv_cname.setText(getItem(position).getcName());
-            vh.tv_cscore.setText(getItem(position).getScore());
-            vh.tv_cre.setText(getItem(position).getCredit());
+            vh.tv_xuefen.setText(getItem(position).getXuefen());
+            vh.tv_grade.setText(getItem(position).getChengji());
+            vh.tv_name.setText(getItem(position).getName());
+
             return convertView;
         }
 
-        public List<Score> getItemList() {
+        public List<Grade> getItemList() {
             return this.mItemList;
         }
 
 
         class ViewHolder {
-            public TextView tv_cname;
-            public TextView tv_cscore;
-            public TextView tv_cre;
+            private TextView tv_name;
+            public TextView tv_xuefen;
+            public TextView tv_grade;
         }
     }
 
     //=============================================================init
-    private void setAdapter(Activity context, ListScorePopup.Builder builder) {
+    private void setAdapter(Activity context, Builder builder) {
         if (builder.getItemEventList() == null || builder.getItemEventList().size() == 0) return;
-        final ListScorePopup.ListPopupAdapter adapter = new ListScorePopup.ListPopupAdapter(context, builder.getItemEventList());
+        final ListPopupAdapter adapter = new ListPopupAdapter(context, builder.getItemEventList());
         mListView.setAdapter(adapter);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -166,8 +172,8 @@ public class ListScorePopup extends BasePopupWindow {
                     if (clickObj instanceof String) {
                         mOnListPopupItemClickListener.onItemClick(position);
                     }
-                    if (clickObj instanceof ListScorePopup.clickItemEvent) {
-                        int what = ((ListScorePopup.clickItemEvent) clickObj).clickTag;
+                    if (clickObj instanceof clickItemEvent) {
+                        int what = ((clickItemEvent) clickObj).clickTag;
                         mOnListPopupItemClickListener.onItemClick(what);
                     }
                 }
@@ -198,7 +204,7 @@ public class ListScorePopup extends BasePopupWindow {
 
     @Override
     public View onCreatePopupView() {
-        return createPopupById(R.layout.popup_list_score);
+        return createPopupById(R.layout.popup_list_grade);
     }
 
     @Override
@@ -217,11 +223,11 @@ public class ListScorePopup extends BasePopupWindow {
 
     //=============================================================interface
 
-    public ListScorePopup.OnListPopupItemClickListener getOnListPopupItemClickListener() {
+    public OnListPopupItemClickListener getOnListPopupItemClickListener() {
         return mOnListPopupItemClickListener;
     }
 
-    public void setOnListPopupItemClickListener(ListScorePopup.OnListPopupItemClickListener onListPopupItemClickListener) {
+    public void setOnListPopupItemClickListener(OnListPopupItemClickListener onListPopupItemClickListener) {
         mOnListPopupItemClickListener = onListPopupItemClickListener;
     }
 

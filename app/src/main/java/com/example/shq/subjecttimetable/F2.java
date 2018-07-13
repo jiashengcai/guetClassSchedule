@@ -15,9 +15,9 @@ import com.example.shq.subjecttimetable.helper.CourseTableHelper;
 import com.example.shq.subjecttimetable.helper.SharedPref;
 import com.example.shq.subjecttimetable.helper.ToastHelper;
 import com.example.shq.subjecttimetable.other.Exam;
+import com.example.shq.subjecttimetable.other.Grade;
 import com.example.shq.subjecttimetable.other.ListExamPopup;
-import com.example.shq.subjecttimetable.other.ListScorePopup;
-import com.example.shq.subjecttimetable.other.Score;
+import com.example.shq.subjecttimetable.other.ListGradePopup;
 import com.example.shq.subjecttimetable.other.XuefenjiPopup;
 
 import java.io.IOException;
@@ -68,7 +68,7 @@ public class F2 extends Fragment {
 
                 //Intent sIntent = new Intent(getActivity(), showScore.class);
                 //startActivity(sIntent);
-                showScoreList();
+                showGrade();
             }
         });
         button2.setOnClickListener(new View.OnClickListener()
@@ -382,7 +382,8 @@ public class F2 extends Fragment {
         listExamPopup.showPopupWindow();
     }
 
-    public void showScoreList(){
+    public void showGrade(){
+        // http://172.16.64.236/student/xuefenji.asp?type=0&lwPageSize=1000&lwBtnquery=%B2%E9%D1%AF
         client=new OkHttpClient.Builder()
                 .cookieJar(new CookieJar() {
                     private final HashMap<HttpUrl, List<Cookie>> cookieStore = new HashMap<>();
@@ -390,7 +391,7 @@ public class F2 extends Fragment {
                     @Override
                     public void saveFromResponse(HttpUrl url, List<Cookie> cookies) {
                         cookieStore.put(url, cookies);
-                        cookieStore.put(HttpUrl.parse("http://xk.cacacai.cn:8080/student/public/login.asp"), cookies);
+                        cookieStore.put(HttpUrl.parse("http://172.16.64.236/student/public/login.asp"), cookies);
                         for(Cookie cookie:cookies){
                             System.out.println("cookie Name:"+cookie.name());
                             System.out.println("cookie Path:"+cookie.path());
@@ -399,7 +400,7 @@ public class F2 extends Fragment {
 
                     @Override
                     public List<Cookie> loadForRequest(HttpUrl url) {
-                        List<Cookie> cookies = cookieStore.get(HttpUrl.parse("http://xk.cacacai.cn:8080/student/public/login.asp"));
+                        List<Cookie> cookies = cookieStore.get(HttpUrl.parse("http://172.16.64.236/student/public/login.asp"));
                         if(cookies==null){
                             System.out.println("没加载到cookie");
                         }
@@ -420,67 +421,58 @@ public class F2 extends Fragment {
                 .post(formBody)
                 .build();//创建网络请求request
         Call call = client.newCall(request);
-
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        ToastHelper.showToast(getActivity().getApplicationContext(), "网络请求错误！", 0);
-                    }
-                });
+
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
+
+
                 RequestBody formBody1 = new FormBody.Builder()
-                        .add("ckind", "")
-                        .add("lwPageSize","1000")
+                        .add("type", "0")
+                        .add("lwPageSize", "1000")
                         .add("lwBtnquery","%B2%E9%D1%AF")
-                        .build();
-                Request request1 = new Request.Builder()
+                        .build();//创建网络请求表单
+                Request request = new Request.Builder()
                         .url(getActivity().getApplicationContext().getString(R.string.url_score))
                         .post(formBody1)
-                        .build();
-                call = client.newCall(request1);
+                        .build();//创建网络请求request
+                call = client.newCall(request);
                 call.enqueue(new Callback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
-                        ToastHelper.showToast(getActivity().getApplicationContext(), "请求考试安排错误！", 0);
+
                     }
 
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
+
                         byte[] data=response.body().bytes();
                         String str = new String(data, "gb2312");
-                        Log.d("test1",str);
-                        final List<Score> examList=CourseTableHelper.htmlToScoreList(str);
-                        for(Score s:examList){
-                            Log.d("test",s.toString());
-                        }
-                        sharedPref.putString("stmlStrExam",str);
+                        final List<Grade> gradeList=CourseTableHelper.htmlToGradeList(str);
+
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                showPopupListScore(examList);
+                                showGradePopup(gradeList);
                             }
                         });
                         response.body().close();
                     }
-
                 });
             }
-
         });
     }
-
-    private void showPopupListScore(List<Score> scoreList){
-        ListScorePopup.Builder scoreBuilder=new ListScorePopup.Builder(this.getActivity());
-        for (int i=0;i<scoreList.size();i++){
-            scoreBuilder.addItem(scoreList.get(i));
+    private void showGradePopup(List<Grade> gradeList){
+        ListGradePopup.Builder examBuilder=new ListGradePopup.Builder(this.getActivity());
+        for (int i=0;i<gradeList.size();i++){
+            examBuilder.addItem(gradeList.get(i));
         }
-        ListScorePopup listScorePopup=new ListScorePopup(this.getActivity(),scoreBuilder);
-        listScorePopup.showPopupWindow();
+        ListGradePopup listExamPopup=new ListGradePopup(this.getActivity(),examBuilder);
+        listExamPopup.showPopupWindow();
     }
+
 }

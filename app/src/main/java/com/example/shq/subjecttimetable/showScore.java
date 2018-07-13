@@ -1,22 +1,14 @@
 package com.example.shq.subjecttimetable;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.shq.subjecttimetable.helper.CourseTableHelper;
 import com.example.shq.subjecttimetable.helper.SharedPref;
-import com.example.shq.subjecttimetable.helper.ToastHelper;
-import com.example.shq.subjecttimetable.other.Exam;
-import com.example.shq.subjecttimetable.other.ListExamPopup;
-import com.example.shq.subjecttimetable.other.ListScorePopup;
-import com.example.shq.subjecttimetable.other.Score;
-import com.example.shq.subjecttimetable.other.XuefenjiPopup;
 
 import java.io.IOException;
 import java.util.ArrayList;

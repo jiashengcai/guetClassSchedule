@@ -12,6 +12,18 @@
         android:layout_centerInParent="true"
         android:layout_margin="25dp"
         >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="已学课程成绩"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textColor="@color/dark"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/line_bg"/>
         <ListView
             android:id="@+id/popup_list"
             android:layout_width="match_parent"
@@ -20,7 +32,8 @@
             android:scrollbars="none"
             android:divider="@color/line_bg"
             android:dividerHeight="0.5dp"
-            tools:listitem="@layout/item_score"
+            android:layout_marginTop="20dp"
+            tools:listitem="@layout/item_grade"
             />
     </RelativeLayout>
 </RelativeLayout>

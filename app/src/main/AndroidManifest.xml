@@ -29,7 +29,6 @@
         <activity android:name=".F2" />
         <activity android:name=".showScore" />
         <activity android:name=".F3" />
-        <activity android:name=".item_score"></activity>
     </application>
 
 </manifest>
